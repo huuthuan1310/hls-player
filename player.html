@@ -19,13 +19,13 @@
     const video = document.getElementById('video');
     const playerJw = jwplayer('player').setup({
       "playlist": [{
-        "file": "HLS/The Medium 2021/index.m3u8",
-        // "tracks": [{
-        //     "kind": "captions",
-        //     "file": "F9.the.Fast.Saga.2021.1080p.AMZN.WEB-DL.DDP5.1.H.264-CMRG_Vietsub.vietsub.srt",
-        //     "label": "Tiếng Việt"
-        //   }
-        // ]
+        "file": "HLS/TheMedium2021/index.m3u8",
+        "tracks": [{
+            "kind": "captions",
+            "file": "F9.the.Fast.Saga.2021.1080p.AMZN.WEB-DL.DDP5.1.H.264-CMRG_Vietsub.vietsub.srt",
+            "label": "Tiếng Việt"
+          }
+        ]
       }]
     }).setFullscreen(true);
   </script>

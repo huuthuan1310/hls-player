@@ -3,13 +3,12 @@ const app = express();
 const fs = require('fs');
 const hls = require('hls-server');
 const path = require('path');
-app.use(express.static(path.resolve('public')));
 app.get('/', (req, res) => {
     return res.status(200).sendFile(`${__dirname}/player.html`);
 });
 
 app.get('/public', (req, res) => {
-    return res.status(200).send(fs.readdirSync(path.resolve('public')));
+    return res.status(200).send(express.static(path.resolve('public')));
 });
 
 const server = app.listen(3001);

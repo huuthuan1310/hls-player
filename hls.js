@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/public', (req, res) => {
-    return res.status(200).send(express.static(path.resolve('public')));
+    return express.static(path.resolve('public'));
 });
 
 const server = app.listen(3001);

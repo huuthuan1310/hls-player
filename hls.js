@@ -8,6 +8,10 @@ app.get('/', (req, res) => {
     return res.status(200).sendFile(`${__dirname}/player.html`);
 });
 
+app.get('/public', (req, res) => {
+    return res.status(200).send(fs.readdirSync(path.resolve('public')));
+});
+
 const server = app.listen(3001);
 
 new hls(server, {

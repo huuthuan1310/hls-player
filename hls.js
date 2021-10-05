@@ -3,10 +3,7 @@ const app = express();
 const fs = require('fs');
 const hls = require('hls-server');
 const path = require('path');
-const public = '/mnt/Data/Phim/HLS';
-app.use(express.static(public));
-console.log(path.resolve('../../../mnt/Data/Phim/HLS'));
-
+app.use(express.static(path.resolve('../../../mnt/Data/Phim/HLS')));
 app.get('/', (req, res) => {
     return res.status(200).sendFile(`${__dirname}/player.html`);
 });

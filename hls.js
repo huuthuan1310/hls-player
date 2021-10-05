@@ -7,12 +7,12 @@ app.get('/', (req, res) => {
     return res.status(200).sendFile(`${__dirname}/player.html`);
 });
 
-app.get('/public', (req, res) => {
-    return express.static(path.resolve('public'));
-});
+// app.get('/public', (req, res) => {
+//     return express.static(path.resolve('public'));
+// });
 
-const server = app.listen(3001).on('connection', stream => {
-    console.log(stream);
+const server = app.listen(3001, '', () => {
+    console.log('Listening on 3001!');
 });
 
 new hls(server, {

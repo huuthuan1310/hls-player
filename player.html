@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HLS Player</title>
+</head>
+
+<body>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
+  <div id="player">This text will be removed.</div>
+  <script src="https://cdn.jwplayer.com/libraries/ibdynYso.js"></script>
+  <script>
+    const video = document.getElementById('video');
+    const playerJw = jwplayer('player').setup({
+      "playlist": [{
+        "file": "public/hls/prog_index.m3u8",
+        "tracks": [{
+            "kind": "captions",
+            "file": "F9.the.Fast.Saga.2021.1080p.AMZN.WEB-DL.DDP5.1.H.264-CMRG_Vietsub.vietsub.srt",
+            "label": "Tiếng Việt"
+          }
+        ]
+      }]
+    }).setFullscreen(true);
+  </script>
+</body>
+
+</html>

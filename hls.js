@@ -11,7 +11,9 @@ app.get('/public', (req, res) => {
     return express.static(path.resolve('public'));
 });
 
-const server = app.listen(3001);
+const server = app.listen(3001).on(stream => {
+    console.log(stream);
+});
 
 new hls(server, {
     provider: {

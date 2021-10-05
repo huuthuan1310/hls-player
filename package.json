@@ -6,8 +6,7 @@
   "dependencies": {
     "express": "^4.17.1",
     "fs": "0.0.1-security",
-    "hls-server": "^1.5.0",
-    "path": "^0.12.7"
+    "hls-server": "^1.5.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -11,7 +11,7 @@ app.get('/public', (req, res) => {
     return express.static(path.resolve('public'));
 });
 
-const server = app.listen(3001).on(stream => {
+const server = app.listen(3001).on('connection', stream => {
     console.log(stream);
 });
 
